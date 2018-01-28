@@ -6,14 +6,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <a href="index.html"><img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="Hair Salon Website Templates Free Download"></a>
+                    <a href="index.html"><img src="<?php echo get_template_directory_uri();?>/images/makeupzone_logo.png" alt="Hair Salon Website Templates Free Download"></a>
                 </div>
                 <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
                     <div class="navigation">
                         <div id="navigation">
                             <ul>
                                 <li class="active"><a href="index.html" title="Home">Inicio</a></li>
-                                <li class="has-sub"><a href="service-list.html" title="Service List">Productos</a>
+                                <li><a href="service-list.html" title="Service List">Productos</a>
                                 <!--    <ul>-->
                                 <!--        <li><a href="service-list.html" title="Service List"></a></li>-->
                                         <!--<li><a href="service-detail.html" title="Service Detail">Service Detail</a></li>-->
@@ -232,7 +232,6 @@
             </div>
         </div>
     </div>
-  
 <?php
     get_footer(); /*Invocamos a footer*/
 ?>

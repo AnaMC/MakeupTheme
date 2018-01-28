@@ -370,7 +370,7 @@ label { }
 #navigation.align-center ul ul { text-align: left; }
 #navigation.align-right > ul > li { float: right; }
 #navigation > ul > li > a { padding: 20px; font-size: 13px; color: #18150d; text-decoration: none; font-weight: 500; text-transform: uppercase; }
-#navigation > ul > li:hover > a { color: #ffffff; background-color: #aa9144; }
+#navigation > ul > li:hover > a { color: #ffffff; background-color: #E3AA96; }
 #navigation > ul > li.has-sub > a { padding-right: 32px; }
 
 /*#navigation > ul > li.has-sub > a:after {

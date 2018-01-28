@@ -12,7 +12,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Hair salon templates for mens hair cut service provider.">
     <meta name="keywords" content="hair salon website templates free download, html5 template, free responsive website templates, website layout,html5 website templates, template for website design, beauty HTML5 templates, cosmetics website templates free download">
-    <title>Men Salon | Hair Salon Website Templates Free Download</title>
+    <title>Makeup Zone.</title>
     <!-- Bootstrap -->
     <link href="<?php echo get_template_directory_uri();?>/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
@@ -20,8 +20,14 @@
     <!-- Font Awesome -->
     <link href="<?php echo get_template_directory_uri();?>/css/font-awesome.min.css" rel="stylesheet">
     <!-- Style -->
-    <link href="<?php echo get_template_directory_uri();?>/style.css" rel="stylesheet">
     
+    <link href="<?php echo get_template_directory_uri();?>/style.css" rel="stylesheet">
+    <?php
+         wp_enqueue_style( 'parent-theme-css', get_template_directory_uri() . '/style.css' ); /*Ponemos en cola la hoja de estilos*/
+    ?>
+    
+    <!--Favicon-->
+    <link href="<?php echo get_template_directory_uri();?>/images/favicon.png" rel="icon">
   
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,11 +36,6 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js "></script>
 <![endif]-->
 
-<!--Activar el JQ e WordPress-->
-<?php
-    wp_enqueue_script('jquery'); /*Ponemos en cola el script*/ 
-    wp_enqueue_style( 'parent-theme-css', get_template_directory_uri() . '/style.css' ); /*Ponemos en cola la hoja de estilos*/
-?>
 </head>
 
 <body>
