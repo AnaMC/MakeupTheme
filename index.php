@@ -14,23 +14,7 @@
                             <ul>
                                 <li class="active"><a href="index.html" title="Home">Inicio</a></li>
                                 <li><a href="service-list.html" title="Service List">Productos</a>
-                                <!--    <ul>-->
-                                <!--        <li><a href="service-list.html" title="Service List"></a></li>-->
-                                        <!--<li><a href="service-detail.html" title="Service Detail">Service Detail</a></li>-->
-                                <!--    </ul>-->
-                                <!--</li>-->
-                                <!--<li class="has-sub"><a href="blog-default.html" title="Blog ">Blog</a>-->
-                                    <!--<ul>-->
-                                        <!--<li><a href="blog-default.html" title="Blog">Blog Default</a></li>-->
-                                        <!--<li><a href="blog-single.html" title="Blog Single ">Blog Single</a></li>-->
-                                    <!--</ul>-->
-                                <!--</li>-->
-                                <li><a href="#" title="Features">Blog</a>
-                                    <ul>
-                                        <!--<li><a href="testimonial.html" title="Service List">Testimonial</a></li>-->
-                                        <!--<li><a href="styleguide.html" title="Service Detail">Style Guide</a></li>-->
-                                    </ul>
-                                </li>
+                                <li><a href="#" title="Features">Blog</a></li>
                                 <li><a href="contact.html" title="Contact Us">Looks</a> </li>
                                 <li><a href="styleguide.html" title="Styleguide">Archives</a> </li>
                             </ul>
@@ -45,7 +29,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <h1 class="hero-title">Makeup Zone.</h1>
-                    <p class="hero-text"><strong>Descripcion corta pero muy molona soblre el blog lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll.</strong> </p>
+                    <p class="hero-text"><strong>Descripcion corta pero muy molona sobre el blog lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll.</strong> </p>
                     <!--<a href="#" class="btn btn-default">Your slider buttons</a> -->
             </div>
             </div>
@@ -57,7 +41,7 @@
                 <div class="col-md-offset-2 col-md-8">
                     <div class="mb60 text-center section-title">
                         <!-- section title start-->
-                        <h1>salon and barbar service</h1>
+                        <h2>¡No te pierdas nuestras últimas entradas!</h2>
                         <h5 class="small-title ">we help you look great</h5>
                     </div>
                     <!-- /.section title start-->
