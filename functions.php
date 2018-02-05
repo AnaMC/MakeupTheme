@@ -42,8 +42,22 @@ add_theme_support('post-thumbnails');
 //Imagenes responsive
 
 function insert_img_responsive($content){ //$content -> Objeto con el contenido del post
-        // Modificmos $content a UTF-8
-        $content=mb_convert_encoding($content, "HTML-ENTITIES","UTF-8");
+        // Modificamos $content a UTF-8
+        $conten= mb_convert_encoding($document, 'HTML-ENTITIES', "UTF-8");
         // Creamos un DOM
         $document = new DOMDocument(); //Posteriormente volcaremos en este documento el nuevo modificado en UTF-8
+        libxml_use_internal_errors(true);  //Como esta a true no muestra los errores por pantalla
+        // Cargamos el content en el DOM
+        $document->loadHTML(UTF8_decode($content));
+        //Acceso a las etiquetas <img>
+        $imgs = $document->getElementsByTagName('img'); //Devuelve un array de etiquetas <img>
+        foreach($imgs as $img){
+                $img->setAttribute('class', 'img-responsive'); //borra las clases y crea la nueva -> class ="img-responsive"
+                $img->setAttribute('width', '100%');
+                $img->setAttribute('height', '100%');
+        }
+        //Grabamos los "cálculos"
+        $html=$document->saveHTML();
+        return $html;
 }
+add_filter('the_content', insert_img_responsive);

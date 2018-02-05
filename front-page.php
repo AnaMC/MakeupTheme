@@ -52,12 +52,20 @@
                     <div class="service-block">
                         <!-- service block -->
                         <div class="service-content">
-                            <!-- service content -->
+                            <!-- post content -->
                             <h3><a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a></h3>
-                                <div class="service-icon mb20">
-                                <!-- service img -->
-                                <img src="<?php echo get_template_directory_uri();?>/images/service-icon-1.png" alt=""> </div>
-                            <!-- service img -->
+                            <div class="service-icon mb20">
+                                <!-- Imagen del post -->
+                                <img class="img-responsive"src="<?php 
+                                if(has_post_thumbnail() ) {
+                                  $postImg = get_the_post_thumbnail_url();
+                                } else{
+                                  $postImg = get_template_directory_uri()."/images/default_post.jpg";
+                                }
+                                  echo $postImg;
+                                ?>"> 
+                            </div>
+                            <!--Fin imagen del post -->
                             <p><?php the_excerpt();?></p>
                             <!--<div class="price">$45</div>-->
                             <div class="testimonial-info">
@@ -74,7 +82,7 @@
                     wp_reset_query();
                   ?>
                     <!-- /.service block -->
-               
+               </div>
                 <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 text-center"> <a href="#" class="btn btn-default">Ver todas las entradas </a> </div>
             </div>
             

@@ -1,66 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Hair salon templates for mens hair cut service provider.">
-    <meta name="keywords" content="hair salon website templates free download, html5 template, free responsive website templates, website layout,html5 website templates, template for website design, beauty HTML5 templates, cosmetics website templates free download">
-    <title>Men Salon | Hair Salon Website Templates Free Download</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7cMontserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <!-- Style -->
-    <link href="css/style.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-
-<body>
+<?php
+    get_header();
+?>
     <div class="header">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <a href="index.html"><img src="images/logo.png" alt=""></a>
+                    <a href="index.html"><img src="<?php echo get_template_directory_uri();?>/images/makeupzone_logo.png" alt="Hair Salon Website Templates Free Download"></a>
                 </div>
-                <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
-                    <div class="navigation">
-                        <div id="navigation">
-                            <ul>
-                                <li class="active"><a href="index.html" title="Home">Home</a></li>
-                                <li class="has-sub"><a href="service-list.html" title="Service List">Service List</a>
-                                    <ul>
-                                        <li><a href="service-list.html" title="Service List">Service List</a></li>
-                                        <li><a href="service-detail.html" title="Service Detail">Service Detail</a></li>
-                                    </ul>
-                                </li>
-                                <li class="has-sub"><a href="blog-default.html" title="Blog ">News</a>
-                                    <ul>
-                                        <li><a href="blog-default.html" title="Blog">Blog Default</a></li>
-                                        <li><a href="blog-single.html" title="Blog Single ">Blog Single</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#" title="Features">Features</a>
-                                    <ul>
-                                        <li><a href="testimonial.html" title="Service List">Testimonial</a></li>
-                                        <li><a href="styleguide.html" title="Service Detail">Style Guide</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html" title="Contact Us">Contact</a> </li>
-                                <li><a href="styleguide.html" title="Styleguide">styleguide</a> </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    get_template_part('nav');
+                ?>
             </div>
         </div>
     </div>
@@ -70,12 +19,12 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="page-caption">
                         <h2 class="page-title">Blog Single</h2>
-                        <div class="page-breadcrumb">
-                            <ol class="breadcrumb">
-                                <li><a href="index.html">Home</a></li>
-                                <li class="active">Blog Single</li>
-                            </ol>
-                        </div>
+                        <!--<div class="page-breadcrumb">-->
+                            <!--<ol class="breadcrumb">-->
+                            <!--    <li><a href="index.html">Home</a></li>-->
+                            <!--    <li class="active">Blog Single</li>-->
+                            <!--</ol>-->
+                        <!--</div>-->
                     </div>
                 </div>
             </div>
