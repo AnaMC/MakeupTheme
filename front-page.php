@@ -38,17 +38,17 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     
                   <!--ZONA EXPERIMENTAL-->
                   
                   <?php 
                   //Sacar los post
-                  $args = array('posts_per_page' => 1); //Mostrará 3 post por página
+                  $args = array('posts_per_page' => 3); //Mostrará 3 post por página
                   $custom_query = new WP_Query($args);
                   if ( $custom_query->have_posts() ): while ($custom_query->have_posts()): $custom_query->the_post(); //Devuelve true si hay post, aquí podemos acceder a sus propiedades
                   ?>
                   
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="service-block">
                         <!-- service block -->
                         <div class="service-content">
@@ -60,92 +60,24 @@
                             <!-- service img -->
                             <p><?php the_excerpt();?></p>
                             <!--<div class="price">$45</div>-->
-                            <div class="price"><a href="<?php the_permalink(); ?>" class="title"><?php the_author(); ?></a></div>
+                            <div class="testimonial-info">
+                            <h4 class="testimonial-name"><a href="<?php the_permalink();?>" class="title"><?php the_author();?></a></h4>
+                            <span class="testimonial-meta"><?php the_date(); ?></span> <span class="testimonial-meta">Customer</span> </div>
                         </div>
                         <!-- service content -->
                         <!---->
                     </div>
-                  <?php // El loop finaliza y la query se resetea aquí para que toda la zona dinámica entre en el loop
-                    endwhile; endif;
-                    wp_reset_query();
-                  ?>
-                    <!-- /.service block -->
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    
-                  <?php 
-                  //Sacar los post
-                  $args = array('posts_per_page' => 1); //Mostrará 3 post por página
-                  $custom_query = new WP_Query($args);
-                  if ( $custom_query->have_posts() ): while ($custom_query->have_posts()): $custom_query->the_post(); //Devuelve true si hay post, aquí podemos acceder a sus propiedades
-                  ?>
-                  
-                    <div class="service-block">
-                        <!-- service block -->
-                        <div class="service-content">
-                            <!-- service content -->
-                            <!--<h2><a href="#" class="title ">MUSTACHE TRIM</a></h2>-->
-                            <h3><a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a></h3>
-                            <div class="service-icon mb20">
-                                <!-- service img -->
-                                <img src="<?php echo get_template_directory_uri();?>/images/service-icon-2.png" alt=""> </div>
-                                <!-- service img -->
-                                <!--<p>Free Responsive HTML5 CSS3 Website Template for hair salon and beauty salon.</p>-->
-                                <p><?php the_excerpt();?></p>
-                                <!--<div class="price">$45</div>-->
-                            <div class="price"><a href="<?php the_permalink(); ?>" class="title"><?php the_author(); ?></a></div>
-                        </div>
-                        <!-- service content -->
                     </div>
-                    <!-- /.service block -->
+                    
                   <?php // El loop finaliza y la query se resetea aquí para que toda la zona dinámica entre en el loop
                     endwhile; endif;
                     wp_reset_query();
                   ?>
-                </div>
-                
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    
-                  <?php 
-                  //Sacar los post
-                  $args = array('posts_per_page' => 1); //Mostrará 3 post por página
-                  $custom_query = new WP_Query($args);
-                  if ( $custom_query->have_posts() ): while ($custom_query->have_posts()): $custom_query->the_post(); //Devuelve true si hay post, aquí podemos acceder a sus propiedades
-                  ?>
-                    <div class="service-block">
-                        <!-- service block -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="service-content">
-                            <!-- service content -->
-                            <!--<h2><a href="#" class="title ">BEARD TRIM</a></h2>-->
-                            <h3><a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a></h3>
-                            <div class="service-icon mb20">
-                            <!-- service img -->
-                            <img src="<?php echo get_template_directory_uri();?>/images/service-icon-3.png" alt=""> </div>
-                            <!-- service img -->
-                            <!--<p>Responsive website templates free download html with css.</p>-->
-                            <p><?php the_excerpt();?></p>
-                            <!--<div class="price ">$45</div>-->
-                            <div class="price"><a href="<?php the_permalink(); ?>" class="title"><?php the_author(); ?></a></div>
-                        </div>
-                        <!-- service content -->
-                    </div>
                     <!-- /.service block -->
-                  <?php // El loop finaliza y la query se resetea aquí para que toda la zona dinámica entre en el loop
-                    endwhile; endif;
-                    wp_reset_query();
-                  ?>    
-                    
-                </div>
-                
-                 <?php // El loop finaliza y la query se resetea aquí para que toda la zona dinámica entre en el loop
-                //   endwhile; endif;
-                //   wp_reset_query();
-                // ?>
-                <!--Fin Zona experimental-->
-                
-                
-                
+               
                 <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 text-center"> <a href="#" class="btn btn-default">Ver todas las entradas </a> </div>
             </div>
+            
         </div>
     </div>
     <div class="space-medium bg-default">

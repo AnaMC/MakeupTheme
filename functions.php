@@ -38,3 +38,12 @@ add_action('wp_enqueue_script','theme_scripts'); /*Añadimos la función al hook
 
 //Añadimos la imagen destacada al tema
 add_theme_support('post-thumbnails');
+
+//Imagenes responsive
+
+function insert_img_responsive($content){ //$content -> Objeto con el contenido del post
+        // Modificmos $content a UTF-8
+        $content=mb_convert_encoding($content, "HTML-ENTITIES","UTF-8");
+        // Creamos un DOM
+        $document = new DOMDocument(); //Posteriormente volcaremos en este documento el nuevo modificado en UTF-8
+}
