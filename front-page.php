@@ -24,6 +24,14 @@
             </div>
             </div>
         </div>
+    <!---->
+    <div clas="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            </div>
+        </div>
+    </div>
+    <!---->
     </div>
     <div class="space-medium">
         <div class="container">
@@ -65,7 +73,7 @@
                                   echo $postImg;
                                 ?>"> 
                             </div>
-                            <!--Fin imagen del post -->
+                            <!--Fin Imagen del post -->
                             <p><?php the_excerpt();?></p>
                             <!--<div class="price">$45</div>-->
                             <div class="testimonial-info">
