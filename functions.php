@@ -61,3 +61,22 @@ function insert_img_responsive($content){ //$content -> Objeto con el contenido 
         return $html;
 }
 add_filter('the_content', insert_img_responsive);
+
+// Función para el commennt form
+
+function my_comments_form ($fiellds){
+    //Información necesaria
+    $user = wp_get_current_user(); //Quien ha escrito el post
+    $commenter = wp_get_current_commenter(); //Datos del usuario que va a dejar el comentario (Nomre, email y url)
+    $nick = $user->exist()?$user -> display_name:''; //Si existe un usuario queremos el nombre
+    $req = get_option('require_name_email');   //Saber si el email del usuario es un campo obligatorio
+    //El objeto fields contiene los campos del formulario, le asignamos las nuevas html
+    $fields['author']='<input type="text" class="comment-form-author" id="author" placeholder="name" name="author" value=""'.esc_attr($commenter['coment_author']).' size="20" required>';
+    $fields['email']='<input type="email" class="comment-form-email" id="email" placeholder="name" name="email" value=""'.esc_attr($commenter['coment_author_email']).' size="20" required>';
+    $fields['ur']='<input type="text" class="comment-form-url" id="url" placeholder="name" name="url" value=""'.esc_attr($commenter['coment_author_url']).' size="20" required>';
+    $fields['comment_field']='<textarea class="comment-form-comment" id="comment" name="comment" value="" cols=" rows="" required></textarea>';
+    
+    return fields;
+}
+
+add_filter('comments_form_default_fields', 'my_comments_form'); /*¿?*/

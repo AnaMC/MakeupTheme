@@ -11,3 +11,58 @@ Version: 2.0
 @import url("css/bootstrap.min.css");
 @import url("css/font-awesome.min.css");
 
+@font-face {
+    font-family: 'opificio';
+    src: url('Opificio_regular.woff');
+    src: url('tipography/Opificio_regular.woff') format('woff');
+}
+
+.hero-completa{
+    height: 89%;
+    width: 100%;
+}
+
+.text-intro{
+    margin-left: -18%;
+    margin-top: 5%;
+}
+
+.text-intro-descrip{
+    margin-left: -59%;
+    margin-top: 15%;
+}
+
+.bg-pres{
+    width: 100%;
+    background-image: url("images/bg4.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center center;  
+}
+
+.verMas{
+    position: absolute;
+    width: 5.9%; 
+    height: 33%; 
+    margin-left: 47.2%;
+    background-image: url(images/verMas.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;  
+}
+
+.fecha{
+    font-size: 0.9em;
+}
+
+.titulos-post{
+    font-weight: 500;
+    font-family: opificio;
+}
+.ultimos-post{
+   font-weight:bold;
+}
+
+.cuerpo-post{
+    font-family: opificio;
+}

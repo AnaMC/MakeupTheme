@@ -14,34 +14,55 @@
             </div>
         </div>
     </div>
-    <div class="hero-section">
+    <div class="hero-section hero-completa">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-left text-intro">
                     <h1 class="hero-title">Makeup Zone.</h1>
-                    <p class="hero-text"><strong>“Amo la confianza que el maquillaje me da”</strong></p>
                     <!--<a href="#" class="btn btn-default">Your slider buttons</a> -->
-            </div>
-            </div>
-        </div>
-    <!---->
-    <div clas="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-left text-intro-descrip text-center">
+                    <p class="hero-text ">
+                        “Apasionadas del maquillaje y la belleza. 
+                        Nos encanta compartir trucos y consejos que nos han servido y que pueden ser útiles para todas vosotras. ”
+                    </p>
+                    <!--<a href="#" class="btn btn-default">Your slider buttons</a> -->
+                </div>
             </div>
         </div>
     </div>
-    <!---->
+    <!--Presentación Makeup Artist-->
+        <div class="space-medium bg-pres">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12"><img src="<?php echo get_template_directory_uri();?>/images/makeupArtist.jpg" alt="" class="img-responsive"></div>
+                <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                    <div class="well-block text-justify">
+                        <h1>The best Makeup Artist</h1>
+                        <h5 class="small-title ">Maquilladora profesional</h5>
+                        <p>Su nombre es Briana, maquilladora profesional residente en Málaga, su estudio está situado en Marbella, una de las zonas con más proyección de esta provincia,
+                           donde ha realizado múltiples sesiones de fotos para editoriales y catálogos de moda, actualmente su ilusión es acercar el maquillaje a todas las mujeres 
+                           con su blog "Makeup Zone." donde colaboran maquilladores de todo el mundo.</p>
+                        <p>La reina de la moda estadounidense, Anna Wintour de Vogue, la proclamó "la artista de maquillaje más influyente del mundo"</p>
+                        <a href="# " class="btn btn-default">Ir a la página personal</a> 
+                        </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!--Fin -->
     <div class="space-medium">
         <div class="container">
             <div class="row">
                 <div class="col-md-offset-2 col-md-8">
-                    <div class="mb60 text-center section-title">
+                    <div class="mb40 text-center section-title">
                         <!-- section title start-->
-                        <h2>¡No te pierdas nuestras últimas publicaciones!</h2>
+                        <h2 class="ultimos-post">¡No te pierdas nuestras últimas publicaciones! <br></h2>
                         <!--<h5 class="small-title ">we help you look great</h5>-->
+                        <div class="verMas"> </div>
+                        <br><br>
                     </div>
+                    
                     <!-- /.section title start-->
                 </div>
             </div>
@@ -51,18 +72,18 @@
                   
                   <?php 
                   //Sacar los post
-                  $args = array('posts_per_page' => 3); //Mostrará 3 post por página
+                  $args = array('posts_per_page' => 6); //Mostrará 3 post por página
                   $custom_query = new WP_Query($args);
                   if ( $custom_query->have_posts() ): while ($custom_query->have_posts()): $custom_query->the_post(); //Devuelve true si hay post, aquí podemos acceder a sus propiedades
                   ?>
-                  
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 "> <!-- col-md-offset-1 desplaza las columnas el numero de columnas indicado, si lo pones bajar el numero de post a 4-->
                     <div class="service-block">
                         <!-- service block -->
                         <div class="service-content">
                             <!-- post content -->
-                            <h3><a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a></h3>
-                            <div class="service-icon mb20">
+                            <h3><a href="<?php the_permalink(); ?>" class="title titulos-post"><?php the_title(); ?></a></h3>
+                            <span class="testimonial-meta fecha"><?php the_date(); ?></span>
+                            <div class="service-icon mb20  ">
                                 <!-- Imagen del post -->
                                 <img class="img-responsive"src="<?php 
                                 if(has_post_thumbnail() ) {
@@ -74,11 +95,12 @@
                                 ?>"> 
                             </div>
                             <!--Fin Imagen del post -->
-                            <p><?php the_excerpt();?></p>
+                            <p class="cuerpo-post text-justify"><?php the_excerpt();?></p>
                             <!--<div class="price">$45</div>-->
                             <div class="testimonial-info">
-                            <h4 class="testimonial-name"><a href="<?php the_permalink();?>" class="title"><?php the_author();?></a></h4>
-                            <span class="testimonial-meta"><?php the_date(); ?></span> <span class="testimonial-meta">Customer</span> </div>
+                                <h4 class="testimonial-name"><a href="<?php the_permalink();?>" class="title"><?php the_author();?></a></h4>
+                                <!--<span class="testimonial-meta">Customer</span>-->
+                            </div>
                         </div>
                         <!-- service content -->
                         <!---->
@@ -96,119 +118,59 @@
             
         </div>
     </div>
-    <div class="space-medium bg-default">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12"><img src="<?php echo get_template_directory_uri();?>/images/about-img.jpg" alt="" class="img-responsive"></div>
-                <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-                    <div class="well-block">
-                        <h1>Men’s salon website templates</h1>
-                        <h5 class="small-title ">best experience ever</h5>
-                        <p>Free Hair Salon Website Templates for your hair salon shop or business. <a href="https://easetemplate.com/">Free Website Template Download It now!</a></p>
-                        <p>Bootstrap templates free download idcondi mentum utturpis one fuscenec justo idle libero pharetra posuere aliquam tempus is porttitor atfinibus sollicitudin namiam.</p>
-                        <p>Best Free HTML CSS Website Templates for salon and hair cutting business. All features are clean designed</p>
-                        <a href="# " class="btn btn-default">View More About us</a> </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="space-medium">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
-                    <div class="section-title mb60 text-center">
+    <!--<div class="space-medium">-->
+    <!--    <div class="container">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">-->
+    <!--                <div class="section-title mb60 text-center">-->
                         <!-- section title start-->
-                        <h1>testimonials</h1>
-                        <h5 class="small-title">What Happy Client Say</h5>
-                    </div>
+    <!--                    <h1>testimonials</h1>-->
+    <!--                    <h5 class="small-title">What Happy Client Say</h5>-->
+    <!--                </div>-->
                     <!-- /.section title start-->
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="testimonial-block">
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">-->
+    <!--                <div class="testimonial-block">-->
                         <!-- testimonial block -->
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">“Free Beauty Website Templates that help me a lot to build easy and fast my hair shop website in 2 days”</p>
-                        </div>
-                        <div class="testimonial-info">
-                            <h4 class="testimonial-name">Reba Truong</h4>
-                            <span class="testimonial-meta">34 Year</span> <span class="testimonial-meta">Customer</span> </div>
-                    </div>
+    <!--                    <div class="testimonial-content">-->
+    <!--                        <p class="testimonial-text">“Free Beauty Website Templates that help me a lot to build easy and fast my hair shop website in 2 days”</p>-->
+    <!--                    </div>-->
+    <!--                    <div class="testimonial-info">-->
+    <!--                        <h4 class="testimonial-name">Reba Truong</h4>-->
+    <!--                        <span class="testimonial-meta">34 Year</span> <span class="testimonial-meta">Customer</span> </div>-->
+    <!--                </div>-->
                     <!--/. testimonial block -->
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="testimonial-block">
+    <!--            </div>-->
+    <!--            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">-->
+    <!--                <div class="testimonial-block">-->
                         <!-- testimonial block -->
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">“Free bootstrap responsive website templates 2017 its best ever i found for my hair salon”</p>
-                        </div>
-                        <div class="testimonial-info">
-                            <h4 class="testimonial-name">Thomas Warren</h4>
-                            <span class="testimonial-meta">34 Year</span> <span class="testimonial-meta ">Customer</span> </div>
-                    </div>
+    <!--                    <div class="testimonial-content">-->
+    <!--                        <p class="testimonial-text">“Free bootstrap responsive website templates 2017 its best ever i found for my hair salon”</p>-->
+    <!--                    </div>-->
+    <!--                    <div class="testimonial-info">-->
+    <!--                        <h4 class="testimonial-name">Thomas Warren</h4>-->
+    <!--                        <span class="testimonial-meta">34 Year</span> <span class="testimonial-meta ">Customer</span> </div>-->
+    <!--                </div>-->
                     <!--/. testimonial block -->
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="testimonial-block">
+    <!--            </div>-->
+    <!--            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">-->
+    <!--                <div class="testimonial-block">-->
                         <!-- testimonial block -->
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">“Best Free HTML CSS Website Templates for salon and hair cutting business. All features are clean designed”</p>
-                        </div>
-                        <div class="testimonial-info">
-                            <h4 class="testimonial-name">Carie Willis</h4>
-                            <span class="testimonial-meta">34 Year</span> <span class="testimonial-meta">Customer</span> </div>
-                    </div>
+    <!--                    <div class="testimonial-content">-->
+    <!--                        <p class="testimonial-text">“Best Free HTML CSS Website Templates for salon and hair cutting business. All features are clean designed”</p>-->
+    <!--                    </div>-->
+    <!--                    <div class="testimonial-info">-->
+    <!--                        <h4 class="testimonial-name">Carie Willis</h4>-->
+    <!--                        <span class="testimonial-meta">34 Year</span> <span class="testimonial-meta">Customer</span> </div>-->
+    <!--                </div>-->
                     <!--/. testimonial block -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="cta-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="cta-title">hair salon website templates</h1>
-                    <p class="cta-text">You can download and use these FREE HTML templates for your salon and beauty shop and store. </p>
-                    <a href="https://easetemplate.com/downloads/category/free-website-template/" class="btn btn-default" target="_blank">Call to action buttons</a> </div>
-            </div>
-        </div>
-    </div>
-    <div class="space-medium">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
-                    <div class="section-title mb40 text-center">
-                        <!-- section title start-->
-                        <h1>Latest News &amp; Article</h1>
-                    </div>
-                    <!-- /.section title start-->
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="post-block">
-                        <div class="row ">
-                            <!-- post block -->
-                            <div class="col-md-6">
-                                <div class="post-img">
-                                    <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/post-img.jpg" alt="" class="img-responsive"></a>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="post-content">
-                                    <h2><a href="https://easetemplate.com/" class="title" target="_blank"> cosmetics website templates free download</a></h2>
-                                    <p class="meta"> <span class="meta-date"> 1 January 2018</span> <span class="meta-comment"><a href="# ">(12) Comments</a></span> <span class="meta-author">By <a href="#">Author</a></span></p>
-                                    <p>Cras dolor arcu porttitor atfinibus idcondi mentum uttu rpis one fuscenec justo idle libero pharetra posuere aliq uam tempus is porttitor atfinibus.</p>
-                                    <a href="#" class="btn btn-default">Read More</a> </div>
-                            </div>
-                        </div>
-                        <!-- /.post block -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</div>-->
+    
 <?php
     get_footer(); /*Invocamos a footer*/
 ?>
