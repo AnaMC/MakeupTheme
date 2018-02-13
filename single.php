@@ -9,15 +9,24 @@
                 </div>
                 <?php
                     get_template_part('nav');
+                    the_post();
+                    $post_id = $post->ID;
                 ?>
             </div>
         </div>
     </div>
-    <div class="page-header">
-        <div class="container">
+       <?php
+            if(has_post_thumbnail()){
+                 $postImg = get_the_post_thumbnail_url();
+            }else{
+                $postImg = get_template_directory_uri() . '/images/default_post.jpg'; 
+            }
+       ?>
+    <div class="page-header destacada-post" style="background-image: url('<?php echo $postImg ?>');">
+        <div class="container" >
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="page-caption">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                    <div class="page-caption ">
                         <h2 class="page-title"><?php the_title(); ?></h2>
                         <!--<div class="page-breadcrumb">-->
                         <!--<ol class="breadcrumb">-->
@@ -39,14 +48,7 @@
                             <div class="post-holder">
                                 <!-- post holder -->
                                 <div class="post-img">
-                                    <img class="img-responsive"src="<?php 
-                                if(has_post_thumbnail() ) {
-                                  $postImg = get_the_post_thumbnail_url();
-                                } else{
-                                  $postImg = get_template_directory_uri()."/images/default_post.jpg";
-                                }
-                                  echo $postImg;
-                                ?>"> 
+                                    <img class="img-responsive"src="<?php echo obtener_imagen_normal(); ?>"> 
                                 </div>
                                 <div class="post-content">
                                     <!-- post content -->
@@ -158,50 +160,50 @@
                                     ?>
                                     <!---->
                                 </div>
-                                <div class="leave-comments">
-                                    <h2 class="reply-title">Leave a Reply</h2>
-                                    <form class="reply-form">
-                                        <div class="row">
+                                <!--<div class="leave-comments">-->
+                                <!--    <h2 class="reply-title">Leave a Reply</h2>-->
+                                <!--    <form class="reply-form">-->
+                                <!--        <div class="row">-->
                                             <!-- Textarea -->
-                                            <div class="form-group">
-                                                <div class="col-md-12">
-                                                    <label class="control-label" for="textarea">Comments</label>
-                                                    <textarea class="form-control" id="textarea" name="textarea" rows="6"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
+                                <!--            <div class="form-group">-->
+                                <!--                <div class="col-md-12">-->
+                                <!--                    <label class="control-label" for="textarea">Comments</label>-->
+                                <!--                    <textarea class="form-control" id="textarea" name="textarea" rows="6"></textarea>-->
+                                <!--                </div>-->
+                                <!--            </div>-->
+                                <!--            <div class="col-md-12">-->
                                                 <!-- Text input-->
-                                                <div class="form-group">
-                                                    <label class="control-label" for="name">Name</label>
-                                                    <span class="required">*</span>
-                                                    <input id="name" name="name" type="text" class="form-control" required="">
-                                                </div>
-                                            </div>
+                                <!--                <div class="form-group">-->
+                                <!--                    <label class="control-label" for="name">Name</label>-->
+                                <!--                    <span class="required">*</span>-->
+                                <!--                    <input id="name" name="name" type="text" class="form-control" required="">-->
+                                <!--                </div>-->
+                                <!--            </div>-->
                                             <!-- Text input-->
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="control-label" for="email">E-mail</label>
-                                                    <span class="required">*</span>
-                                                    <input id="email" name="email" type="email" class="form-control" required="">
-                                                </div>
-                                            </div>
+                                <!--            <div class="col-md-12">-->
+                                <!--                <div class="form-group">-->
+                                <!--                    <label class="control-label" for="email">E-mail</label>-->
+                                <!--                    <span class="required">*</span>-->
+                                <!--                    <input id="email" name="email" type="email" class="form-control" required="">-->
+                                <!--                </div>-->
+                                <!--            </div>-->
                                             <!-- Text input-->
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="control-label" for="Website">Website</label>
-                                                    <span class="required">*</span>
-                                                    <input id="Website" name="Website" type="text" class="form-control" required="">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
+                                <!--            <div class="col-md-12">-->
+                                <!--                <div class="form-group">-->
+                                <!--                    <label class="control-label" for="Website">Website</label>-->
+                                <!--                    <span class="required">*</span>-->
+                                <!--                    <input id="Website" name="Website" type="text" class="form-control" required="">-->
+                                <!--                </div>-->
+                                <!--            </div>-->
+                                <!--            <div class="col-md-12">-->
                                                 <!-- Button -->
-                                                <div class="form-group">
-                                                    <button id="singlebutton" name="singlebutton" class="btn btn-default">Leave A Comment</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
+                                <!--                <div class="form-group">-->
+                                <!--                    <button id="singlebutton" name="singlebutton" class="btn btn-default">Leave A Comment</button>-->
+                                <!--                </div>-->
+                                <!--            </div>-->
+                                <!--        </div>-->
+                                <!--    </form>-->
+                                <!--</div>-->
                             </div>
                         </div>
                     </div>

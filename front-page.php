@@ -98,7 +98,7 @@
                             <p class="cuerpo-post text-justify"><?php the_excerpt();?></p>
                             <!--<div class="price">$45</div>-->
                             <div class="testimonial-info">
-                                <h4 class="testimonial-name"><a href="<?php the_permalink();?>" class="title"><?php the_author();?></a></h4>
+                                <h5 class="testimonial-name"><a href="<?php the_permalink();?>" class="title"><?php the_author();?></a></h5>
                                 <!--<span class="testimonial-meta">Customer</span>-->
                             </div>
                         </div>

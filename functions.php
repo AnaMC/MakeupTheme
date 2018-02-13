@@ -64,8 +64,8 @@ add_filter('the_content', insert_img_responsive);
 
 // Función para el commennt form
 
-function my_comments_form ($fiellds){
-    //Información necesaria
+function my_comments_form ($fiellds){       //fields contiene los campos del formulario
+    //Información necesaria del usuario que va a comentar
     $user = wp_get_current_user(); //Quien ha escrito el post
     $commenter = wp_get_current_commenter(); //Datos del usuario que va a dejar el comentario (Nomre, email y url)
     $nick = $user->exist()?$user -> display_name:''; //Si existe un usuario queremos el nombre
@@ -80,3 +80,18 @@ function my_comments_form ($fiellds){
 }
 
 add_filter('comments_form_default_fields', 'my_comments_form'); /*¿?*/
+
+// PRUEBA
+
+function obtener_imagen_normal() {
+  global $post, $posts;
+  $first_img = '';
+  ob_start();
+  ob_end_clean();
+  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+  $first_img = $matches [1] [0];
+  if(empty($first_img)){ //* Imagen que vamos a utilizar por defecto
+    $first_img = "/images/default_post.jpg'";
+  }
+  return $first_img;
+}

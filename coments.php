@@ -19,7 +19,7 @@
                 <li class="comment">
                     <div class="comment-body">
                         <div class="">
-                            <div class="comment-author"><img src="images/user-pic-2.jpg" alt="" class="img-circle"> </div>
+                            <div class="comment-author"><img src="images/user-pic-2.jpg" alt="" class=" "> </div>
                             <div class="comment-info">
                                 <div class="comment-header">
                                     <div class="comment-meta"><span class="comment-meta-date pull-right">25 February, 2020 </span></div>
