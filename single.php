@@ -48,26 +48,22 @@
                             <div class="post-holder">
                                 <!-- post holder -->
                                 <div class="post-img">
-                                    <img class="img-responsive"src="<?php echo obtener_imagen_normal(); ?>"> 
+                                  <!--  <img class="img-responsive"src="<?php //echo obtener_imagen_normal(); ?>">   -->
                                 </div>
                                 <div class="post-content">
                                     <!-- post content -->
                                     <div class="post-header">
                                         <h1 class="titulos-post"><?php the_title(); ?></h1>
                                         <div class="meta">
-                                            <!-- post meta -->
-                                            <span class="meta-date">Dec 24, 2020 </span>
-                                            <span class="meta-comment"> <a href="#" class="meta-link">05 Comment </a></span>
-                                            <span class="meta-user">by <a href="#"> Admin </a></span>
-                                            <span class="meta-cat"> Category name </span>
+                                           <?php the_content();?>
                                         </div>
                                     </div>
-                                    <p>Responsive <a href="https://easetemplate.com/downloads/category/free-website-template/">website templates free download</a> for business intervention rabitur ante lorem ipsumporta ces convallis is physical medicine of the pain diagnosisognosis.</p>
-                                    <p> Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                                    <img src="images/left-image.jpg" class="alignleft img-responsive" alt="">
-                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                    <p>Lortiam leo lectundit etest euonsequat congue dianas sapien orciplacerat vitae nibh necpretium elem entum ligcongue neque a augue ultricieugiat lacus tincidunt. </p>
-                                    <p>Praesent vel aliquet urnaauris molestie sollicitudin nisl non volutpatm mollis eros lacusac lorem tristique arcu facilisis sedamus ullamcorper accumsan augue quis egestas.</p>
+                                    <!--<p>Responsive <a href="https://easetemplate.com/downloads/category/free-website-template/">website templates free download</a> for business intervention rabitur ante lorem ipsumporta ces convallis is physical medicine of the pain diagnosisognosis.</p>-->
+                                    <!--<p> Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>-->
+                                    <!--<img src="images/left-image.jpg" class="alignleft img-responsive" alt="">-->
+                                    <!--<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>-->
+                                    <!--<p>Lortiam leo lectundit etest euonsequat congue dianas sapien orciplacerat vitae nibh necpretium elem entum ligcongue neque a augue ultricieugiat lacus tincidunt. </p>-->
+                                    <!--<p>Praesent vel aliquet urnaauris molestie sollicitudin nisl non volutpatm mollis eros lacusac lorem tristique arcu facilisis sedamus ullamcorper accumsan augue quis egestas.</p>-->
                                     <div class="related-post-block">
                                         <!-- related post block -->
                                         <div class="row">
