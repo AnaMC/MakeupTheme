@@ -23,9 +23,15 @@
             }
        ?>
     <div class="page-header destacada-post" style="background-image: url('<?php echo $postImg ?>');">
+       
         <div class="container" >
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                     <div class="breadcrumbs">
+                    <?php
+                       my_breadcrumb(); //Llamada a los breadcrumb
+                    ?> 
+                    </div>
                     <div class="page-caption ">
                         <h2 class="page-title"><?php the_title(); ?></h2>
                         <!--<div class="page-breadcrumb">-->
@@ -35,6 +41,7 @@
                         <!--</ol>-->
                         <!--</div>-->
                     </div>
+                   
                 </div>
             </div>
         </div>
@@ -47,16 +54,28 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="post-holder">
                                 <!-- post holder -->
-                                <div class="post-img">
-                                  <!--  <img class="img-responsive"src="<?php //echo obtener_imagen_normal(); ?>">   -->
-                                </div>
                                 <div class="post-content">
                                     <!-- post content -->
                                     <div class="post-header">
                                         <h1 class="titulos-post"><?php the_title(); ?></h1>
+                                         <span class="testimonial-meta fecha"><?php the_date(); ?></span>
                                         <div class="meta">
                                            <?php the_content();?>
                                         </div>
+                                        
+                                        <div class="testimonial-info">
+                                        <h5 class="testimonial-name"><a href="<?php get_the_author_posts_link();?>" class="title"><?php the_author();?></a></h5>
+                                        </div>
+                                         
+                                          <!--Avatar del autor del Post-->
+                                        <!--<div>-->
+                                        <!--  <img class="avatar-img" src="-->
+                                        <!--    <?php//-->
+                                        //<!--    //echo get_avatar(get_the_author_meta('ID'), 32,  get_template_directory_uri() . '/images/avatarDefault.jpg', 'Avatar');-->
+                                        //<!--    ?>"-->
+                                        <!--    >-->
+                                        <!--</div>-->
+                                        
                                     </div>
                                     <!--<p>Responsive <a href="https://easetemplate.com/downloads/category/free-website-template/">website templates free download</a> for business intervention rabitur ante lorem ipsumporta ces convallis is physical medicine of the pain diagnosisognosis.</p>-->
                                     <!--<p> Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>-->

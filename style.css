@@ -72,3 +72,32 @@ Version: 2.0
     background-size: cover;
     background-position: center center; 
 }
+
+.avatar-img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #4286f4;
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.breadcrumbs a{
+    color: #ffffff;
+}
+
+.breadcrumbs{
+    color: #ffffff;
+    margin-top: 5%;
+    text-align: right;
+
+}
+
+.catnum{
+    color: #f44259 !important;
+    margin-left: 5%;
+}

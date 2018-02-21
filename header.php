@@ -7,12 +7,12 @@
 
 <head>
     <meta charset="utf-8">
+    <title><?php my_title();?></title>  <!--La llamada a la funcion de my tilte-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Hair salon templates for mens hair cut service provider.">
     <meta name="keywords" content="hair salon website templates free download, html5 template, free responsive website templates, website layout,html5 website templates, template for website design, beauty HTML5 templates, cosmetics website templates free download">
-    <title>Makeup Zone.</title>
     <!-- Bootstrap -->
     <link href="<?php echo get_template_directory_uri();?>/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
